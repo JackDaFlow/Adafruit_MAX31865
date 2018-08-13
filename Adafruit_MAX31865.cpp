@@ -24,8 +24,8 @@
 #include <stdlib.h>
 #include <SPI.h>
 
-static SPISettings max31865_spisettings = SPISettings(500000, MSBFIRST, SPI_MODE1);
-
+//static SPISettings max31865_spisettings = SPISettings(500000, MSBFIRST, SPI_MODE1);
+static SPISettings max31865_spisettings = SPISettings(16000000/4, MSBFIRST, SPI_MODE3); // Analog TMC2130, HW-SPI
 
 // Software (bitbang) SPI
 Adafruit_MAX31865::Adafruit_MAX31865(int8_t spi_cs, int8_t spi_mosi, int8_t spi_miso, int8_t spi_clk) {
